@@ -94,7 +94,7 @@
 	
 	//in HTML content, change ALL instances of ".php" to ".html"
 	$page_1_content = str_replace( '.php', '.html', $page_1_content );
-	$page_2_content = str_replace( '.php', '.html', $page_2_content );
+	//$page_2_content = str_replace( '.php', '.html', $page_2_content );
 	
 	//echo $build_relative_path . $pg_1;
 	
