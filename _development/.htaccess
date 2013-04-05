@@ -1,0 +1,26 @@
+# http://www.chicagostyleseo.com/2010/04/googles-need-for-speed-use-cache-and-htaccess-to-speed-up-your-site/
+#
+# Set Expires Headers
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+Header set Expires "Thu, 15 Jan 2015 20:00:00 GMT"
+</FilesMatch>
+
+# Set the cache-control max-age
+# 1 year
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+Header set Cache-Control "max-age=31449600, public"
+</FilesMatch>
+# 2 DAYS
+<FilesMatch "\.(xml|txt)$">
+Header set Cache-Control "max-age=172800, public, must-revalidate"
+</FilesMatch>
+# 4 HOURS
+<FilesMatch "\.(html|htm)$">
+Header set Cache-Control "max-age=14400, must-revalidate"
+</FilesMatch>
+
+# FONTs:
+# Source: http://carisenda.com/blog/2012/carisenda_htaccess_file.html 
+#http://www.lubyte.de/en/blog/2010/08/10/woff-caching-firefox
+AddType application/x-font-woff .woff
+AddType application/vnd.ms-fontobject .eot

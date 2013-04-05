@@ -1,0 +1,446 @@
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles ( PHP Static Website Generator Test )
+   ========================================================================== */
+  
+/*START Font-Face*/
+	@font-face {
+			font-family: 'HelveticaNeue';
+			src: url('fonts/HelveticaNeue.ttf');
+			
+			font-weight: normal;
+			font-style: normal;
+	}
+	@font-face {
+			font-family: 'HelveticaNeue-BoldCond';
+			src: url('fonts/HelveticaNeue-BoldCond.otf');
+			
+			font-weight: normal;
+			font-style: normal;
+	}
+	@font-face {
+			font-family: 'HelveticaNeue-Roman';
+			src: url('fonts/HelveticaNeue-Roman.otf');
+			
+			font-weight: normal;
+			font-style: normal;
+	}
+	@font-face {
+			font-family: 'MinionPro-Regular';
+			src: url('fonts/MinionPro/MinionPro-Regular.otf');
+			
+			font-weight: normal;
+			font-style: normal;
+	}
+	@font-face {
+			font-family: 'MinionPro-Bold';
+			src: url('fonts/MinionPro/MinionPro-Bold.otf');
+			
+			font-weight: normal;
+			font-style: normal;
+	}
+/*END Font-Face*/
+
+/*START Frame/Globals*/
+	body, 
+	p {
+		
+		font-family: 'HelveticaNeue-Roman', sans-serif; 
+		font-size:1em;
+		color: #000;
+	}
+	h1, h2 {
+		font-family: 'HelveticaNeue-BoldCond', sans-serif; 
+		font-size:19pt;
+		color: #2d6cb5;
+		text-transform:capitalize;
+		margin:0;/*override normalize.css*/
+	}
+	img {
+		border: 1px solid #2d6cb5; /* RGB from psd*/
+	}
+	.shadow {
+			-webkit-box-shadow: 3px 3px 5px 6px #ccc;
+	  		box-shadow:         3px 3px 5px 6px #ccc;
+	}
+	body{
+		background:#fff url('../img/ajax-loader_trans.gif') center center no-repeat;
+	}/*
+	body.fade_bg{
+		background: #ccc none;
+		-webkit-transition: background 1s linear;
+	}*/
+	#container {
+		opacity: 0;
+		
+		background:#fff;
+		width:930px;
+		height:630px;
+		position:relative;
+	}
+	#container.show{
+		opacity: 1;
+	  	-webkit-transition: opacity .5s cubic-bezier;
+	}
+	header {
+		background: blue; /*url('../img/header.jpg') no-repeat*/
+		height:30px;
+		width:100%;
+		
+		text-indent:-9999px;
+		font-size:1px;
+		overflow:hidden;
+	}
+/*END Frame/Globals*/
+
+/*START NAV (main nav and sub nav)*/
+	.navbar ul {
+		margin:0;
+		padding:0;
+		float:left;
+		width:100%;
+	}
+	.navbar li {
+		float:left;
+		/* 155 * 6 = 930. 930 + 5px vert dividers = 935px. should be 940. 2px vert dividers instead? */
+		width:155px;
+	}
+	#main_nav {
+		margin-bottom:20px;
+	}
+	#main_nav li a {
+		font-family: 'HelveticaNeue-BoldCond', sans-serif; 
+		font-size: .9em;
+		color: #000;
+		
+		display:block;
+		color: #000;
+		background:#fff;
+		text-align:center;
+		
+		width:auto; /*shrink to fit content*/
+		text-decoration:none;
+		text-transform:uppercase;
+		border-right:1px solid #ccc;
+		
+		padding: 7px 0;
+	}
+	#main_nav li.last a {
+		border-right:0 none;
+		font-size: 70%;
+		padding-top: 10px;
+	}
+	#main_nav li a:hover,
+	#main_nav li a:active,
+	#main_nav li a.active {
+		background: #2d6cb5;
+		color:#fff;
+	}
+	/* note: sub_nav doesnt have anchor tags */
+	#sub_nav {
+		position: absolute;
+		bottom: 0;
+	}
+	#sub_nav li {
+		font-family: 'HelveticaNeue-Roman', sans-serif; 
+		font-size: 0.7em;
+		
+		display:block;
+		color: #fff;
+		background:#666;
+		text-align:center;
+		
+		width:185px; /*shrink to fit content*/
+		text-transform:uppercase;
+		border-right:1px solid #ccc;
+		
+		padding: 3px 0;
+	}
+	#sub_nav li.last {
+		border-right:0 none;
+		
+		width:186px;
+	}
+	
+	/* need to add active class via script */
+	#sub_nav li.hover,
+	#sub_nav li.active {
+		background:#fff;
+		color:#666;
+	}
+/*END NAV*/
+
+/*START Topics*/
+	.topic {
+		visibility:hidden;
+		display:none;
+		
+		
+		margin:0 30px;
+	}
+	.topic.show {
+		visibility:visible;
+		display:block;
+		
+		-webkit-transform: all .5s linear;
+	}
+	
+	/*START section specific styles*/
+		#about p {
+				
+			padding-left:10px;
+		}
+		#about img {
+			float:right;
+		}
+		#info h3 {
+			font-family: 'MinionPro-Bold', serif;
+			font-size:13pt;
+		}
+		#info p {
+			font-family: 'MinionPro-Regular', serif;
+			font-size:12pt;
+		}
+	/*END section specific styles*/
+	
+	.vert_divider {
+		position: absolute;
+		left: 29px;
+		width: 5px;
+		background: 
+		#999;
+		height: 399px;
+		margin-top: 14px;
+	}
+/*END Topics*/
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+/* start popup */
+/*#overlay{
+	display:none;
+	visibility:none;
+	
+	width: 235px;
+	height: 339px;
+	position: absolute;
+	top: 275px;
+	left: 51px;
+	z-index:99999;
+
+}
+#overlay.show{
+	display:block;
+	visibility:visible;
+}
+#overlay #close {
+	position: absolute;
+	bottom: 9px;
+	left: 74px;
+	width: 80px;
+	height: 26px;
+	
+}*/
+/* end popup */
